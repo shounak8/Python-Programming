@@ -1,0 +1,18 @@
+"""The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?"""
+
+E = []
+F = []
+d = int(input())
+
+for i in range(2,d):
+    if d%i == 0:
+        E.append(int(i))
+        for h in E:
+            for j in range(2,h):
+                if h%j == 0:
+                    break
+            else:
+                F.append(int(h))
+print(max(F))
